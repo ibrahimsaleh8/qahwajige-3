@@ -88,17 +88,23 @@ export default async function RootLayout({
       <body className={`${cairoFont.className} antialiased`}>
         {children}
         <Analytics />
-        <Script
-          id="clixtell-tracking"
-          src="https://scripts.clixtell.com/track.js"
-          strategy="afterInteractive"
-        />
+        <Script id="clixtell-tracking" strategy="afterInteractive">
+          {`
+            var script = document.createElement('script');
+            var prefix = document.location.protocol;
+            script.async = true;
+            script.type = 'text/javascript';
+            var target = prefix + '//scripts.clixtell.com/track.js';
+            script.src = target;
+            document.head.appendChild(script);
+          `}
+        </Script>
 
+        {/* NoScript Fallback */}
         <noscript>
           <img
-            src="https://tracker.clixtell.com/track/t.gif"
-            alt=""
-            referrerPolicy="no-referrer-when-downgrade"
+            src="//tracker.clixtell.com/track/t.gif"
+            alt="clixtell-tracker"
           />
         </noscript>
       </body>
