@@ -94,7 +94,7 @@ export default function HeroSection({
                       alt="Hero Image"
                       width={1000}
                       height={1000}
-                      className="w-full h-full object-center object-cover"
+                      className="w-full md:h-full h-90 object-center object-cover"
                     />
                   )}
 
