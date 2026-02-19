@@ -16,7 +16,7 @@ export default async function Layout({
     redirect("/login");
   }
   return (
-    <div className="flex w-full">
+    <div className="flex w-full text-black">
       <SidebarProvider>
         <DashboardSidebar />
 
