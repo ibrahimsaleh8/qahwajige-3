@@ -84,17 +84,22 @@ export default function HeroSection({
 
             {/* Image */}
             <div className="flex-1 relative w-full">
-              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl ">
-                <div className="aspect-2/2 bg-linear-to-br from-main-color/20 to-transparent relative ">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl ">
+                <div className="aspect-2/2 relative w-full h-auto">
                   {/* Placeholder for coffee image */}
                   <div className="absolute inset-0 bg-cover bg-center" />
                   {image && (
                     <Image
                       src={image}
                       alt="Hero Image"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-center object-cover"
+                      width={600}
+                      height={600}
+                      priority
+                      loading="eager"
+                      decoding="async"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                      className="w-full md:h-full h-140 object-center object-cover"
+                      quality={85}
                     />
                   )}
 
