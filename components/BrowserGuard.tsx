@@ -217,8 +217,6 @@ export default function BrowserGuard() {
             font-family:sans-serif;
             color:white;
           ">
-            <p>❌ موقعنا يعمل فقط على متصفح جوجل كروم الرسمي</p>
-            <p>This website only works on official Google Chrome.</p>
           </div>
         `;
       }
