@@ -9,7 +9,7 @@ export default function HeroSection({
   image,
 }: HeroSectionData & { image?: string | null }) {
   return (
-    <section id="home" className="pt-24 pb-16 px-4">
+    <section id="home" className="pt-24 px-4">
       <div className="container mx-auto">
         <div className="relative">
           {/* Main Hero Content */}
