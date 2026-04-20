@@ -46,13 +46,13 @@ export default async function OutsideSaudi() {
         brandName={data.header.brandName}
         telephone={data.footer.phone}
       />
-      <HeroSection
-        {...data.hero}
-        image={data.about.image}
+      <HeroSection {...data.hero} image={data.about.image} />
+      <GallerySection gallery={data.gallery} />
+      <AboutSection
+        {...data.about}
+        whatsApp={data.hero.whatsApp}
         features={data.whyUs.features}
       />
-      <GallerySection gallery={data.gallery} />
-      <AboutSection {...data.about} whatsApp={data.hero.whatsApp} />
       <ServicesSection
         {...data.services}
         whatsApp={data.hero.whatsApp}

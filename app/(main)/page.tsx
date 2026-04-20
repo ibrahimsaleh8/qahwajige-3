@@ -38,14 +38,13 @@ export default async function HomePage() {
   }
 
   return (
-    <div>
+    <>
       <HeroSection
         {...data.hero}
         image={data.about.image}
-        features={data.whyUs.features}
       />
-      <AboutSection {...data.about} whatsApp={data.hero.whatsApp} />
       <GallerySection gallery={data.gallery} />
+      <AboutSection {...data.about} whatsApp={data.hero.whatsApp} features={data.whyUs.features} />
       <ServicesSection
         {...data.services}
         whatsApp={data.hero.whatsApp}
@@ -62,6 +61,6 @@ export default async function HomePage() {
         totalRatings={data.rating?.totalRatings ?? 0}
       />
       <ContactSection {...data.footer} whatsapp={data.hero?.whatsApp ?? ""} />
-    </div>
+    </>
   );
 }

@@ -5,22 +5,6 @@ export function GallerySection({ gallery }: { gallery: GalleryImageData[] }) {
   return (
     <section id="gallery" className="py-24 bg-second-bg">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-main-color font-semibold text-sm tracking-wider mb-4 block">
-            معرض الأعمال{" "}
-          </span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            لحظات لا تُنسى من
-            <br />
-            <span className="text-main-color">مناسباتنا المميزة</span>
-          </h2>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            شاهد مجموعة من أفضل الصور لخدماتنا في مختلف المناسبات والفعاليات
-          </p>
-          <div className="w-20 h-1 bg-main-color mx-auto my-6" />
-        </div>
-
         {/* Gallery Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {gallery.map((image, index) => (

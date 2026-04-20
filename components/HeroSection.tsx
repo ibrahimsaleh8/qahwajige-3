@@ -1,22 +1,13 @@
-import { HeroSectionData, WhyUsFeatureData } from "@/lib/responseType";
+import { HeroSectionData } from "@/lib/responseType";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
-import { Award, Clock, Shield, Sparkles, LucideIcon } from "lucide-react";
-
-const iconMap: Record<string, LucideIcon> = {
-  Award,
-  Clock,
-  Shield,
-  Sparkles,
-};
 
 export default function HeroSection({
   headline,
   subheadline,
   whatsApp,
   image,
-  features,
-}: HeroSectionData & { image?: string | null; features?: WhyUsFeatureData[] }) {
+}: HeroSectionData & { image?: string | null }) {
   return (
     <section id="home" className="pt-24 pb-16 px-4">
       <div className="container mx-auto">
@@ -125,32 +116,6 @@ export default function HeroSection({
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-            {features &&
-              features.map((card) => {
-                const IconComponent =
-                  iconMap[card.icon as keyof typeof iconMap];
-
-                return (
-                  <div
-                    key={card.title}
-                    className="bg-card-background border border-white/5 rounded-2xl p-6 text-center hover:border-main-color/30 transition-all">
-                    <div className="w-12 h-12 bg-main-color/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      {IconComponent && (
-                        <IconComponent className="w-6 h-6 text-main-color" />
-                      )}
-                    </div>
-
-                    <p className="text-white text-sm mb-2">{card.title}</p>
-
-                    <p className="text-white/70 leading-relaxed mb-6">
-                      {card.description}
-                    </p>
-                  </div>
-                );
-              })}
           </div>
         </div>
       </div>
