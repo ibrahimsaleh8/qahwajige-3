@@ -45,6 +45,7 @@ export default async function HomePage() {
         features={data.whyUs.features}
       />
       <AboutSection {...data.about} whatsApp={data.hero.whatsApp} />
+      <GallerySection gallery={data.gallery} />
       <ServicesSection
         {...data.services}
         whatsApp={data.hero.whatsApp}
@@ -60,7 +61,6 @@ export default async function HomePage() {
         averageRating={data.rating?.averageRating ?? 0}
         totalRatings={data.rating?.totalRatings ?? 0}
       />
-      <GallerySection gallery={data.gallery} />
       <ContactSection {...data.footer} whatsapp={data.hero?.whatsApp ?? ""} />
     </div>
   );

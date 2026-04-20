@@ -51,6 +51,7 @@ export default async function OutsideSaudi() {
         image={data.about.image}
         features={data.whyUs.features}
       />
+      <GallerySection gallery={data.gallery} />
       <AboutSection {...data.about} whatsApp={data.hero.whatsApp} />
       <ServicesSection
         {...data.services}
@@ -68,7 +69,6 @@ export default async function OutsideSaudi() {
       />
       <PreventCopy />
 
-      <GallerySection gallery={data.gallery} />
       <ContactSection {...data.footer} whatsapp={data.hero?.whatsApp ?? ""} />
       <OutsideFooter {...data.footer} description={data.hero?.subheadline} />
     </>
