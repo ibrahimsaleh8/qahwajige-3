@@ -17,7 +17,6 @@ export default function Footer({
       { name: "عن الشركة", href: "/#about" },
       { href: "/articles", name: "خدمات الضيافة" },
       { name: "خدماتنا", href: "/#services" },
-      { name: "اتصل بنا", href: "/#contact" },
     ],
   };
 
@@ -25,7 +24,7 @@ export default function Footer({
     <footer className="bg-main-black border-t border-white/5">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <Link
@@ -49,26 +48,6 @@ export default function Footer({
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-6">تواصل معنا</h3>
-
-            <ul className="space-y-4 text-white/80">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4" />
-                {address}
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4" />
-                {email}
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4" />
-                {phone}
-              </li>
             </ul>
           </div>
         </div>

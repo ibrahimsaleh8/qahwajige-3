@@ -12,7 +12,6 @@ const navLinks = [
   { href: "/#about", label: "من نحن" },
   { href: "/#services", label: "خدماتنا" },
   { href: "/#gallery", label: "معرض الصور" },
-  { href: "/#contact", label: "تواصل معنا" },
 ];
 
 export function Header({

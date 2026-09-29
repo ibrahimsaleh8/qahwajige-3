@@ -1,12 +1,5 @@
 import { ServicesSectionData } from "@/lib/responseType";
-import { Coffee, Users, Heart, Building2, LucideIcon } from "lucide-react";
-
-const iconMap: Record<string, LucideIcon> = {
-  Coffee,
-  Users,
-  Heart,
-  Building2,
-};
+import ShowSectionIcon from "./ShowSectionIcon";
 
 export default function ServicesSection({
   description,
@@ -38,15 +31,11 @@ export default function ServicesSection({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {items &&
             items.map((card) => {
-              const IconComponent = iconMap[card.icon as keyof typeof iconMap];
-
               return (
                 <div
                   key={card.title}
                   className="group bg-[#1F1B0E] border border-main-color/30 rounded-xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 w-full">
-                  <div className="size-16 bg-main-color/10 rounded-xl flex items-center justify-center text-main-color mb-8 group-hover:bg-main-color/80 group-hover:text-white transition-colors">
-                    {IconComponent && <IconComponent className="w-8 h-8" />}
-                  </div>
+                  <ShowSectionIcon icon={card.icon} />
 
                   <p className="text-xl text-white font-bold mb-4">
                     {card.title}

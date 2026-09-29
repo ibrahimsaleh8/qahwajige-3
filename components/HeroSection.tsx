@@ -90,7 +90,6 @@ export default function HeroSection({
                       decoding="async"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                       className="w-full md:h-full h-140 object-center object-cover"
-                      quality={85}
                     />
                   )}
 
